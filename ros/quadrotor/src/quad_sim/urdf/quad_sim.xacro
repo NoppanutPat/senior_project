@@ -20,9 +20,9 @@
     </macro>
 
     <property name="PI" value="3.1415926535897931" />
-    <property name="frame_file_path" value="/home/pat/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/Frame_stl.stl" />
-    <property name="propeller_base_file_path" value="/home/pat/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl" />
-    <property name="propeller_file_path" value="/home/pat/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Propeller_holder.stl" />
+    <property name="frame_file_path" value="/home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/final_frame.stl" />
+    <property name="propeller_base_file_path" value="/home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl" />
+    <property name="propeller_file_path" value="/home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Propeller_holder.stl" />
     
     <macro name="propeller_holder_link" params="name">
         <link name="${name}">
@@ -71,17 +71,17 @@
     <link name="frame">
         <inertial>
             <mass value="0.061399" />
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="-0.11 0.11 0" rpy="0 0 0" />
             <frame_inertia />
         </inertial>
         <visual>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="-0.11 0.11 0" rpy="${PI/2} 0 0" />
             <geometry>
                 <mesh filename="${frame_file_path}" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="-0.11 0.11 0" rpy="${PI/2} 0 0" />
             <geometry>
                 <mesh filename="${frame_file_path}" scale="0.001 0.001 0.001" />
             </geometry>
@@ -172,82 +172,5 @@
             <topicName>throttle</topicName>
         </plugin>
     </gazebo>
-
-
-    <property name="camera_link_size" value="0.005" /> 
-
-
-
-    <link name="camera_link">
-        <collision>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <geometry>
-        <box size="${camera_link_size} ${camera_link_size} ${camera_link_size}"/>
-        </geometry>
-        </collision>
-
-        <visual>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <geometry>
-        <box size="${camera_link_size} ${camera_link_size} ${camera_link_size}"/>
-        </geometry>
-        <material name="red"/>
-        </visual>
-
-        <inertial>
-        <mass value="1e-5" />
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
-        </inertial>
-
-    </link>
-
-    <joint name="camera_joint" type="fixed">
-        <origin xyz="0.09 0 0.084" rpy="0 0 0"/>
-        <parent link="frame"/>
-        <child link="camera_link"/>
-    </joint>
-
-    <gazebo reference="camera_link">
-    <sensor type="camera" name="camera1">
-      <update_rate>30.0</update_rate>
-      <camera name="camera1">
-        <horizontal_fov>1.3962634</horizontal_fov>
-        <!-- <horizontal_fov>1.0</horizontal_fov> -->
-        <image>
-          <width>800</width>
-          <height>800</height>
-          <format>R8G8B8</format>
-        </image>
-        <clip>
-          <near>0.02</near>
-          <far>300</far>
-        </clip>
-        <noise>
-          <type>gaussian</type>
-          <!-- Noise is sampled independently per pixel on each frame.
-               That pixel's noise value is added to each of its color
-               channels, which at that point lie in the range [0,1]. -->
-          <mean>0.0</mean>
-          <stddev>0.007</stddev>
-        </noise>
-      </camera>
-
-      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
-        <alwaysOn>true</alwaysOn>
-        <updateRate>10.0</updateRate>
-        <cameraName>camera1</cameraName>
-        <imageTopicName>image_raw</imageTopicName>
-        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-        <frameName>camera_link</frameName>
-        <hackBaseline>1.57</hackBaseline>
-        <distortionK1>0.0</distortionK1>
-        <distortionK2>0.0</distortionK2>
-        <distortionK3>0.0</distortionK3>
-        <distortionT1>0.0</distortionT1>
-        <distortionT2>0.0</distortionT2>
-      </plugin>
-    </sensor>
-  </gazebo>
 
 </robot>

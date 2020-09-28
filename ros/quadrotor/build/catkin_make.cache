@@ -1,2 +1,2 @@
 quad_sim
--DCATKIN_DEVEL_PREFIX=/home/pat/senior_project/ros/quadrotor/devel -DCMAKE_INSTALL_PREFIX=/home/pat/senior_project/ros/quadrotor/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/nptttn/senior_project/ros/quadrotor/devel -DCMAKE_INSTALL_PREFIX=/home/nptttn/senior_project/ros/quadrotor/install -G Unix Makefiles

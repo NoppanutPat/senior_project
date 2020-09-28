@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pat/senior_project/ros/quadrotor/src
+CMAKE_SOURCE_DIR = /home/nptttn/senior_project/ros/quadrotor/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pat/senior_project/ros/quadrotor/build
+CMAKE_BINARY_DIR = /home/nptttn/senior_project/ros/quadrotor/build
 
 # Utility rule file for nav_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ quad_sim/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build: nav_msgs_genera
 .PHONY : quad_sim/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
 
 quad_sim/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/pat/senior_project/ros/quadrotor/build/quad_sim && $(CMAKE_COMMAND) -P CMakeFiles/nav_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/nptttn/senior_project/ros/quadrotor/build/quad_sim && $(CMAKE_COMMAND) -P CMakeFiles/nav_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : quad_sim/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean
 
 quad_sim/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/pat/senior_project/ros/quadrotor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pat/senior_project/ros/quadrotor/src /home/pat/senior_project/ros/quadrotor/src/quad_sim /home/pat/senior_project/ros/quadrotor/build /home/pat/senior_project/ros/quadrotor/build/quad_sim /home/pat/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nptttn/senior_project/ros/quadrotor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nptttn/senior_project/ros/quadrotor/src /home/nptttn/senior_project/ros/quadrotor/src/quad_sim /home/nptttn/senior_project/ros/quadrotor/build /home/nptttn/senior_project/ros/quadrotor/build/quad_sim /home/nptttn/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : quad_sim/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/depend
 

@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = '/home/pat/quad_sim/devel;/opt/ros/melodic'.split(';')
+            CMAKE_PREFIX_PATH = '/home/nptttn/senior_project/quad_sim/devel;/home/nptttn/Quadrotor_Simulator/devel;/home/nptttn/bangpanroyyim/devel;/home/nptttn/catkin_ws/devel;/opt/ros/melodic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

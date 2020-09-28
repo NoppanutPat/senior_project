@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <math.h>
 
-#include </home/pat/senior_project/ros/quadrotor/src/quad_sim/include/quad_sim/gazebo_ros_force.h>
+#include </home/nptttn/senior_project/ros/quadrotor/src/quad_sim/include/quad_sim/gazebo_ros_force.h>
 
 namespace gazebo 
 {

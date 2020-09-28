@@ -1,0 +1,421 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+   <world name="default">
+      <include>
+         <uri>model://ground_plane</uri>
+      </include>
+      <include>
+         <uri>model://sun</uri>
+      </include>
+      <actor name="frame_moving">
+        <link name='frame'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <inertial>
+                <pose frame=''>-0.052259 0.052259 0.041994 0 -0 0</pose>
+                <mass>0.129239</mass>
+                <inertia>
+                <ixx>0.0013316</ixx>
+                <ixy>0.000389941</ixy>
+                <ixz>-0.000283206</ixz>
+                <iyy>0.0013303</iyy>
+                <iyz>0.000284041</iyz>
+                <izz>0.00219867</izz>
+                </inertia>
+            </inertial>
+            <collision name='frame_collision'>
+                <pose frame=''>-0.11 0.11 0 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/final_frame.stl</uri>
+                </mesh>
+                </geometry>
+            </collision>
+            <collision name='frame_fixed_joint_lump__propeller_holder1_collision_1'>
+                <pose frame=''>0.095 -0.095 0.08 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+                </mesh>
+                </geometry>
+            </collision>
+            <collision name='frame_fixed_joint_lump__propeller_holder2_collision_2'>
+                <pose frame=''>-0.095 0.095 0.08 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+                </mesh>
+                </geometry>
+            </collision>
+            <collision name='frame_fixed_joint_lump__propeller_holder3_collision_3'>
+                <pose frame=''>0.095 0.095 0.08 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+                </mesh>
+                </geometry>
+            </collision>
+            <collision name='frame_fixed_joint_lump__propeller_holder4_collision_4'>
+                <pose frame=''>-0.095 -0.095 0.08 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+                </mesh>
+                </geometry>
+            </collision>
+            <visual name='frame_visual'>
+                <pose frame=''>-0.11 0.11 0 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/final_frame.stl</uri>
+                </mesh>
+                </geometry>
+            </visual>
+            <visual name='frame_fixed_joint_lump__propeller_holder1_visual_1'>
+                <pose frame=''>0.095 -0.095 0.08 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+                </mesh>
+                </geometry>
+            </visual>
+            <visual name='frame_fixed_joint_lump__propeller_holder2_visual_2'>
+                <pose frame=''>-0.095 0.095 0.08 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+                </mesh>
+                </geometry>
+            </visual>
+            <visual name='frame_fixed_joint_lump__propeller_holder3_visual_3'>
+                <pose frame=''>0.095 0.095 0.08 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+                </mesh>
+                </geometry>
+            </visual>
+            <visual name='frame_fixed_joint_lump__propeller_holder4_visual_4'>
+                <pose frame=''>-0.095 -0.095 0.08 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+                </mesh>
+                </geometry>
+            </visual>
+        </link>
+        <link name='propeller1'>
+            <pose frame=''>0.095 -0.095 0.081 1.5708 -0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <mass>0.01696</mass>
+                <inertia>
+                <ixx>3.962e-06</ixx>
+                <ixy>0</ixy>
+                <ixz>-8.233e-10</ixz>
+                <iyy>6.1e-06</iyy>
+                <iyz>0</iyz>
+                <izz>6.716e-06</izz>
+                </inertia>
+            </inertial>
+            <collision name='propeller1_collision'>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Propeller_holder.stl</uri>
+                </mesh>
+                </geometry>
+            </collision>
+            <visual name='propeller1_visual'>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Propeller_holder.stl</uri>
+                </mesh>
+                </geometry>
+            </visual>
+        </link>
+        <joint name='propeller_base_propeller1' type='revolute'>
+            <child>propeller1</child>
+            <parent>frame</parent>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                <lower>-1e+16</lower>
+                <upper>1e+16</upper>
+                </limit>
+                <dynamics>
+                <damping>0.0004</damping>
+                <friction>0</friction>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+            </axis>
+        </joint>
+        <link name='propeller2'>
+            <pose frame=''>-0.095 0.095 0.081 1.5708 -0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <mass>0.01696</mass>
+                <inertia>
+                <ixx>3.962e-06</ixx>
+                <ixy>0</ixy>
+                <ixz>-8.233e-10</ixz>
+                <iyy>6.1e-06</iyy>
+                <iyz>0</iyz>
+                <izz>6.716e-06</izz>
+                </inertia>
+            </inertial>
+            <collision name='propeller2_collision'>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Propeller_holder.stl</uri>
+                </mesh>
+                </geometry>
+            </collision>
+            <visual name='propeller2_visual'>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Propeller_holder.stl</uri>
+                </mesh>
+                </geometry>
+            </visual>
+        </link>
+        <joint name='propeller_base_propeller2' type='revolute'>
+            <child>propeller2</child>
+            <parent>frame</parent>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                <lower>-1e+16</lower>
+                <upper>1e+16</upper>
+                </limit>
+                <dynamics>
+                <damping>0.0004</damping>
+                <friction>0</friction>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+            </axis>
+        </joint>
+        <link name='propeller3'>
+            <pose frame=''>0.095 0.095 0.081 1.5708 -0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <mass>0.01696</mass>
+                <inertia>
+                <ixx>3.962e-06</ixx>
+                <ixy>0</ixy>
+                <ixz>-8.233e-10</ixz>
+                <iyy>6.1e-06</iyy>
+                <iyz>0</iyz>
+                <izz>6.716e-06</izz>
+                </inertia>
+            </inertial>
+            <collision name='propeller3_collision'>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Propeller_holder.stl</uri>
+                </mesh>
+                </geometry>
+            </collision>
+            <visual name='propeller3_visual'>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Propeller_holder.stl</uri>
+                </mesh>
+                </geometry>
+            </visual>
+        </link>
+        <joint name='propeller_base_propeller3' type='revolute'>
+            <child>propeller3</child>
+            <parent>frame</parent>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                <lower>-1e+16</lower>
+                <upper>1e+16</upper>
+                </limit>
+                <dynamics>
+                <damping>0.0004</damping>
+                <friction>0</friction>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+            </axis>
+        </joint>
+        <link name='propeller4'>
+            <pose frame=''>-0.095 -0.095 0.081 1.5708 -0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <mass>0.01696</mass>
+                <inertia>
+                <ixx>3.962e-06</ixx>
+                <ixy>0</ixy>
+                <ixz>-8.233e-10</ixz>
+                <iyy>6.1e-06</iyy>
+                <iyz>0</iyz>
+                <izz>6.716e-06</izz>
+                </inertia>
+            </inertial>
+            <collision name='propeller4_collision'>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Propeller_holder.stl</uri>
+                </mesh>
+                </geometry>
+            </collision>
+            <visual name='propeller4_visual'>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/KV2540_Motor_Propeller_holder.stl</uri>
+                </mesh>
+                </geometry>
+            </visual>
+        </link>
+        <joint name='propeller_base_propeller4' type='revolute'>
+            <child>propeller4</child>
+            <parent>frame</parent>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                <lower>-1e+16</lower>
+                <upper>1e+16</upper>
+                </limit>
+                <dynamics>
+                <damping>0.0004</damping>
+                <friction>0</friction>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+            </axis>
+        </joint>
+
+        <plugin name='quad_liftforce_plugins' filename='libquad_liftforce_plugins_demo.so'>
+            <robotNamespace>frame_moving</robotNamespace>
+            <propeller1_link>propeller1</propeller1_link>
+            <propeller2_link>propeller2</propeller2_link>
+            <propeller3_link>propeller3</propeller3_link>
+            <propeller4_link>propeller4</propeller4_link>
+            <topicName>throttle</topicName>
+        </plugin>
+        
+        <static>0</static>
+        <script>
+          <loop>true</loop>
+          <auto_start>true</auto_start>
+          <trajectory id="0" type="square">
+             <waypoint>
+                <time>0.0</time>
+                <pose>0 0 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>1.0</time>
+                <pose>0 0 1 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>6.0</time>
+                <pose>0.5 0 1 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>7.5</time>
+                <pose>0.5 1 0.9 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>9.0</time>
+                <pose>0 2 1 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>10.0</time>
+                <pose>0 2 0 0 0 0</pose>
+             </waypoint>
+          </trajectory>
+        </script>
+      </actor>
+      <actor name="target_move">
+        <link name='target'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <inertial>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <mass>0.061399</mass>
+                <inertia>
+                <ixx>0.0001231</ixx>
+                <ixy>-3.56e-08</ixy>
+                <ixz>4.131e-07</ixz>
+                <iyy>0.0001218</iyy>
+                <iyz>4.21e-07</iyz>
+                <izz>0.0001942</izz>
+                </inertia>
+            </inertial>
+            <collision name='target_collision'>
+                <pose frame=''>0 0 0 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.015 0.015 0.015</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/target.stl</uri>
+                </mesh>
+                </geometry>
+            </collision>
+            <visual name='target_visual'>
+                <pose frame=''>0 0 0 1.5708 -0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>0.015 0.015 0.015</scale>
+                    <uri>//home/nptttn/senior_project/ros/quadrotor/src/quad_sim/urdf/meshes/target.stl</uri>
+                </mesh>
+                </geometry>
+            </visual>
+            </link>
+        <script>
+          <loop>true</loop>
+          <auto_start>true</auto_start>
+          <trajectory id="1" type="square">
+             <waypoint>
+                <time>0.0</time>
+                <pose>-1 1 1 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>5.0</time>
+                <pose>1 1 1 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>7.5</time>
+                <pose>0.5 1 1 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>10.0</time>
+                <pose>-1 1 1 0 0 0</pose>
+             </waypoint>
+             
+          </trajectory>
+        </script>
+      </actor>
+   </world>
+</sdf>

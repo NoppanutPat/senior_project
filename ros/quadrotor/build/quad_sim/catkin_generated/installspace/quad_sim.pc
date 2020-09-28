@@ -1,4 +1,4 @@
-prefix=/home/pat/senior_project/ros/quadrotor/install
+prefix=/home/nptttn/senior_project/ros/quadrotor/install
 
 Name: quad_sim
 Description: Description of quad_sim
