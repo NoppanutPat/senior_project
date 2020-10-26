@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nptttn/senior_project/ros/quadrotor/src
+CMAKE_SOURCE_DIR = /home/pat/drone/senior_project/ros/quadrotor/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nptttn/senior_project/ros/quadrotor/build
+CMAKE_BINARY_DIR = /home/pat/drone/senior_project/ros/quadrotor/build
 
 # Utility rule file for doxygen.
 
@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/nptttn/senior_project/ros/quadrotor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nptttn/senior_project/ros/quadrotor/src /home/nptttn/senior_project/ros/quadrotor/src /home/nptttn/senior_project/ros/quadrotor/build /home/nptttn/senior_project/ros/quadrotor/build /home/nptttn/senior_project/ros/quadrotor/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pat/drone/senior_project/ros/quadrotor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pat/drone/senior_project/ros/quadrotor/src /home/pat/drone/senior_project/ros/quadrotor/src /home/pat/drone/senior_project/ros/quadrotor/build /home/pat/drone/senior_project/ros/quadrotor/build /home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

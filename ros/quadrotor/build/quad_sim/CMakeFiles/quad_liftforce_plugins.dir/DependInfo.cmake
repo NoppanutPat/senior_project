@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nptttn/senior_project/ros/quadrotor/src/quad_sim/src/quad_liftforce_plugins.cpp" "/home/nptttn/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/quad_liftforce_plugins.dir/src/quad_liftforce_plugins.cpp.o"
+  "/home/pat/drone/senior_project/ros/quadrotor/src/quad_sim/src/quad_liftforce_plugins.cpp" "/home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/quad_liftforce_plugins.dir/src/quad_liftforce_plugins.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -24,7 +24,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/gazebo-9"
   "/usr/include/bullet"
   "/usr/include/simbody"
-  "/usr/include/sdformat-6.2"
+  "/usr/include/sdformat-6.0"
   "/usr/include/ignition/math4"
   "/usr/include/OGRE"
   "/usr/include/OGRE/Terrain"
@@ -33,6 +33,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/ignition/msgs1"
   "/usr/include/ignition/common1"
   "/usr/include/ignition/fuel_tools1"
+  "/home/pat/drone/senior_project/ros/quadrotor/src/quad_sim/include"
   "/usr/include/uuid"
   "/usr/include/x86_64-linux-gnu"
   )

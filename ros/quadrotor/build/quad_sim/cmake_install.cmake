@@ -1,8 +1,8 @@
-# Install script for directory: /home/nptttn/senior_project/ros/quadrotor/src/quad_sim
+# Install script for directory: /home/pat/drone/senior_project/ros/quadrotor/src/quad_sim
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nptttn/senior_project/ros/quadrotor/install")
+  set(CMAKE_INSTALL_PREFIX "/home/pat/drone/senior_project/ros/quadrotor/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nptttn/senior_project/ros/quadrotor/build/quad_sim/catkin_generated/installspace/quad_sim.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/catkin_generated/installspace/quad_sim.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_sim/cmake" TYPE FILE FILES
-    "/home/nptttn/senior_project/ros/quadrotor/build/quad_sim/catkin_generated/installspace/quad_simConfig.cmake"
-    "/home/nptttn/senior_project/ros/quadrotor/build/quad_sim/catkin_generated/installspace/quad_simConfig-version.cmake"
+    "/home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/catkin_generated/installspace/quad_simConfig.cmake"
+    "/home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/catkin_generated/installspace/quad_simConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_sim" TYPE FILE FILES "/home/nptttn/senior_project/ros/quadrotor/src/quad_sim/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_sim" TYPE FILE FILES "/home/pat/drone/senior_project/ros/quadrotor/src/quad_sim/package.xml")
 endif()
 

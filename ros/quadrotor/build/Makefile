@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nptttn/senior_project/ros/quadrotor/src
+CMAKE_SOURCE_DIR = /home/pat/drone/senior_project/ros/quadrotor/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nptttn/senior_project/ros/quadrotor/build
+CMAKE_BINARY_DIR = /home/pat/drone/senior_project/ros/quadrotor/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nptttn/senior_project/ros/quadrotor/build/CMakeFiles /home/nptttn/senior_project/ros/quadrotor/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles /home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nptttn/senior_project/ros/quadrotor/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -283,6 +283,19 @@ gtest: cmake_check_build_system
 gtest/fast:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named quad_velocity_control_plugins
+
+# Build rule for target.
+quad_velocity_control_plugins: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 quad_velocity_control_plugins
+.PHONY : quad_velocity_control_plugins
+
+# fast build rule for target.
+quad_velocity_control_plugins/fast:
+	$(MAKE) -f quad_sim/CMakeFiles/quad_velocity_control_plugins.dir/build.make quad_sim/CMakeFiles/quad_velocity_control_plugins.dir/build
+.PHONY : quad_velocity_control_plugins/fast
 
 #=============================================================================
 # Target rules for targets named quad_liftforce_plugins
@@ -1606,6 +1619,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... quad_velocity_control_plugins"
 	@echo "... quad_liftforce_plugins"
 	@echo "... control_msgs_generate_messages_py"
 	@echo "... control_msgs_generate_messages_lisp"

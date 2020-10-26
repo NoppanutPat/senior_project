@@ -19,7 +19,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>/home/nptttn/senior_project/quad_sim/src/quad_sim/urdf/meshes/final_frame.stl</uri>
+            <uri>$(find quad_sim)/urdf/meshes/final_frame.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -28,7 +28,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>/home/nptttn/senior_project/quad_sim/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+            <uri>$(find quad_sim)/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -37,7 +37,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>/home/nptttn/senior_project/quad_sim/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+            <uri>$(find quad_sim)/urdf/meshes/KV2540_Motor_Base.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -46,7 +46,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>/home/nptttn/senior_project/quad_sim/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+            <uri>$(find quad_sim)/urdf/meshes/KV2540_Motor_Base.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -55,7 +55,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>/home/nptttn/senior_project/quad_sim/src/quad_sim/urdf/meshes/KV2540_Motor_Base.stl</uri>
+            <uri>$(find quad_sim)/urdf/meshes/KV2540_Motor_Base.stl</uri>
           </mesh>
         </geometry>
       </collision>

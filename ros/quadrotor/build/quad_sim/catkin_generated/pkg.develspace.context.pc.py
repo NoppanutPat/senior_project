@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "roscpp;gazebo_ros".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "quad_sim"
-PROJECT_SPACE_DIR = "/home/nptttn/senior_project/ros/quadrotor/devel"
+PROJECT_SPACE_DIR = "/home/pat/drone/senior_project/ros/quadrotor/devel"
 PROJECT_VERSION = "0.0.0"

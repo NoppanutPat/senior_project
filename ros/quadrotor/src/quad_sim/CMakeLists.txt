@@ -142,6 +142,8 @@ include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
   ${GAZEBO_INCLUDE_DIRS}
+  /home/pat/drone/senior_project/ros/quadrotor/src/quad_sim/include
+  /usr/include
 )
 
 ## Declare a C++ library
@@ -151,6 +153,9 @@ include_directories(
 
 add_library(quad_liftforce_plugins src/quad_liftforce_plugins.cpp)
 target_link_libraries(quad_liftforce_plugins ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+
+add_library(quad_velocity_control_plugins src/quad_velocity_control_plugins.cpp)
+target_link_libraries(quad_velocity_control_plugins ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -218,10 +223,6 @@ target_link_libraries(quad_liftforce_plugins ${catkin_LIBRARIES} ${GAZEBO_LIBRAR
 #   # myfile2
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
-
-#############
-## Testing ##
-#############
 
 ## Add gtest based cpp test target and link libraries
 # catkin_add_gtest(${PROJECT_NAME}-test test/test_quad_sim.cpp)

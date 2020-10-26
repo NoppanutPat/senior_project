@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <math.h>
 
-#include </home/nptttn/senior_project/ros/quadrotor/src/quad_sim/include/quad_sim/gazebo_ros_force.h>
+#include <quad_sim/gazebo_ros_force.h>
 
 namespace gazebo 
 {
@@ -161,12 +161,14 @@ void GazeboRosForce::UpdateObjectForce(const std_msgs::Float64MultiArray::ConstP
   for(int i=0;i<4;i++){
     if (throttle->data[i] >= 0){
       velo = -0.75+47.3*(throttle->data[i])+(-0.281*(throttle->data[i]*throttle->data[i]))+(9.97E-04*(throttle->data[i]*throttle->data[i]*throttle->data[i]));
+      force = -5.38E-03+(0.0478*throttle->data[i])+(8.93E-04*throttle->data[i]*throttle->data[i])+(-2.34E-06*throttle->data[i]*throttle->data[i]*throttle->data[i]);
     }
     else{
       velo = -1*(-0.75-47.3*(throttle->data[i])+(-0.281*(throttle->data[i]*throttle->data[i]))-(9.97E-04*(throttle->data[i]*throttle->data[i]*throttle->data[i])));
+      force = -5.38E-03-(0.0478*throttle->data[i])+(8.93E-04*throttle->data[i]*throttle->data[i])-(-2.34E-06*throttle->data[i]*throttle->data[i]*throttle->data[i]);
     }
 
-    // ROS_FATAL_NAMED("force","force : %lf , velo : %lf\n",force,velo);
+    ROS_FATAL_NAMED("force","force : %lf , velo : %lf\n",force,velo);
 
     tempvelo.push_back(velo);
     templiftforce.push_back(force);
@@ -181,10 +183,16 @@ void GazeboRosForce::UpdateObjectForce(const std_msgs::Float64MultiArray::ConstP
 void GazeboRosForce::UpdateChild()
 {
   this->lock_.lock();
+
   ignition::math::Vector3d velo1(0,0,this->rotorvelo.data[0]);
   ignition::math::Vector3d velo2(0,0,this->rotorvelo.data[1]);
   ignition::math::Vector3d velo3(0,0,this->rotorvelo.data[2]);
   ignition::math::Vector3d velo4(0,0,this->rotorvelo.data[3]);
+  
+  ignition::math::Vector3d liftforce1(0,this->liftforce.data[0],0);
+  ignition::math::Vector3d liftforce2(0,this->liftforce.data[1],0);
+  ignition::math::Vector3d liftforce3(0,this->liftforce.data[2],0);
+  ignition::math::Vector3d liftforce4(0,this->liftforce.data[3],0);
 
   // this->link_->AddRelativeForce(force);
   // // this->link_->AddForceAtRelativePosition(force,ignition::math::Vector3d(0,0,0));
@@ -196,6 +204,10 @@ void GazeboRosForce::UpdateChild()
   this->link3_->SetAngularVel(velo3);
   this->link4_->SetAngularVel(velo4);
 
+  this->link1_->AddRelativeForce(liftforce1);
+  this->link2_->AddRelativeForce(liftforce2);
+  this->link3_->AddRelativeForce(liftforce3);
+  this->link4_->AddRelativeForce(liftforce4);
   this->lock_.unlock();
 }
 

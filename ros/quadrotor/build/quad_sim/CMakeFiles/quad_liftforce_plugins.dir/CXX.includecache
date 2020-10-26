@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nptttn/senior_project/ros/quadrotor/src/quad_sim/include/quad_sim/gazebo_ros_force.h
+/home/pat/drone/senior_project/ros/quadrotor/src/quad_sim/include/quad_sim/quad_liftforce_plugins.h
 string
 -
 ros/callback_queue.h
@@ -30,14 +30,16 @@ gazebo/common/Plugin.hh
 gazebo/common/Events.hh
 -
 
-/home/nptttn/senior_project/ros/quadrotor/src/quad_sim/src/quad_liftforce_plugins.cpp
+/home/pat/drone/senior_project/ros/quadrotor/src/quad_sim/src/quad_liftforce_plugins.cpp
 algorithm
 -
 assert.h
 -
 math.h
 -
-/home/nptttn/senior_project/ros/quadrotor/src/quad_sim/include/quad_sim/gazebo_ros_force.h
+ros/console.h
+-
+quad_sim/quad_liftforce_plugins.h
 -
 
 /opt/ros/melodic/include/ros/advertise_options.h
@@ -937,6 +939,10 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/common/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/common/Image.hh
+Winsock2.h
+-
+FreeImage.h
+-
 string
 -
 ignition/math/Color.hh
@@ -967,6 +973,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/common/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/common/Plugin.hh
+Winsock2.h
+-
 unistd.h
 -
 sys/types.h
@@ -982,8 +990,6 @@ list
 string
 -
 sdf/sdf.hh
--
-boost/filesystem.hpp
 -
 gazebo/common/CommonTypes.hh
 /usr/include/gazebo-9/gazebo/common/gazebo/common/CommonTypes.hh
@@ -1301,8 +1307,6 @@ topic_info.pb.h
 /usr/include/gazebo-9/gazebo/msgs/topic_info.pb.h
 track_visual.pb.h
 /usr/include/gazebo-9/gazebo/msgs/track_visual.pb.h
-twist.pb.h
-/usr/include/gazebo-9/gazebo/msgs/twist.pb.h
 undo_redo.pb.h
 /usr/include/gazebo-9/gazebo/msgs/undo_redo.pb.h
 user_cmd.pb.h
@@ -4864,38 +4868,6 @@ gazebo/util/system.hh
 gazebo/msgs/MsgFactory.hh
 /usr/include/gazebo-9/gazebo/msgs/gazebo/msgs/MsgFactory.hh
 
-/usr/include/gazebo-9/gazebo/msgs/twist.pb.h
-string
--
-google/protobuf/stubs/common.h
--
-google/protobuf/arena.h
--
-google/protobuf/arenastring.h
--
-google/protobuf/generated_message_util.h
--
-google/protobuf/metadata.h
--
-google/protobuf/message.h
--
-google/protobuf/repeated_field.h
--
-google/protobuf/extension_set.h
--
-google/protobuf/unknown_field_set.h
--
-vector3d.pb.h
-/usr/include/gazebo-9/gazebo/msgs/vector3d.pb.h
-header.pb.h
-/usr/include/gazebo-9/gazebo/msgs/header.pb.h
-boost/shared_ptr.hpp
--
-gazebo/util/system.hh
--
-gazebo/msgs/MsgFactory.hh
-/usr/include/gazebo-9/gazebo/msgs/gazebo/msgs/MsgFactory.hh
-
 /usr/include/gazebo-9/gazebo/msgs/undo_redo.pb.h
 string
 -
@@ -5411,6 +5383,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/physics/Base.hh
+Winsock2.h
+-
 boost/enable_shared_from_this.hpp
 -
 string
@@ -5501,6 +5475,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/physics/CylinderShape.hh
+Winsock2.h
+-
 gazebo/physics/Shape.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/physics/Shape.hh
 gazebo/util/system.hh
@@ -5541,6 +5517,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/physics/GearboxJoint.hh
+Winsock2.h
+-
 string
 -
 gazebo/msgs/msgs.hh
@@ -5593,6 +5571,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/physics/Inertial.hh
+Winsock2.h
+-
 string
 -
 memory
@@ -5661,6 +5641,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/physics/JointState.hh
+Winsock2.h
+-
 vector
 -
 string
@@ -5693,6 +5675,8 @@ gazebo/physics/State.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/physics/State.hh
 
 /usr/include/gazebo-9/gazebo/physics/Link.hh
+Winsock2.h
+-
 map
 -
 vector
@@ -5855,8 +5839,6 @@ string
 -
 sdf/sdf.hh
 -
-gazebo/msgs/poses_stamped.pb.h
-/usr/include/gazebo-9/gazebo/physics/gazebo/msgs/poses_stamped.pb.h
 gazebo/physics/PhysicsTypes.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/physics/PhysicsTypes.hh
 gazebo/util/system.hh
@@ -5885,6 +5867,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/physics/PolylineShape.hh
+Winsock2.h
+-
 vector
 -
 gazebo/physics/Shape.hh
@@ -5963,6 +5947,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/physics/Shape.hh
+Winsock2.h
+-
 string
 -
 ignition/math/Vector3.hh
@@ -5985,6 +5971,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/physics/SphereShape.hh
+Winsock2.h
+-
 gazebo/physics/Shape.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/physics/Shape.hh
 gazebo/physics/PhysicsTypes.hh
@@ -5993,6 +5981,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/physics/State.hh
+Winsock2.h
+-
 string
 -
 sdf/sdf.hh
@@ -6049,6 +6039,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/physics/gazebo/util/system.hh
 
 /usr/include/gazebo-9/gazebo/physics/World.hh
+Winsock2.h
+-
 vector
 -
 list
@@ -11674,11 +11666,11 @@ uuid/uuid.h
 
 /usr/include/ignition/transport4/ignition/transport/detail/Export.hh
 
-/usr/include/sdformat-6.2/sdf/Assert.hh
+/usr/include/sdformat-6.0/sdf/Assert.hh
 sdf/Exception.hh
-/usr/include/sdformat-6.2/sdf/sdf/Exception.hh
+/usr/include/sdformat-6.0/sdf/sdf/Exception.hh
 
-/usr/include/sdformat-6.2/sdf/Console.hh
+/usr/include/sdformat-6.0/sdf/Console.hh
 fstream
 -
 iostream
@@ -11688,9 +11680,9 @@ memory
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/Element.hh
 memory
 -
 string
@@ -11700,21 +11692,21 @@ utility
 vector
 -
 sdf/Param.hh
-/usr/include/sdformat-6.2/sdf/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/sdf/Param.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Error.hh
+/usr/include/sdformat-6.0/sdf/Error.hh
 iostream
 -
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Exception.hh
+/usr/include/sdformat-6.0/sdf/Exception.hh
 cstdint
 -
 iostream
@@ -11726,24 +11718,22 @@ sstream
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Filesystem.hh
+/usr/include/sdformat-6.0/sdf/Filesystem.hh
 memory
 -
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/Param.hh
 boost/any.hpp
 -
 boost/variant.hpp
 -
 algorithm
--
-cctype
 -
 cstdint
 -
@@ -11762,21 +11752,21 @@ vector
 ignition/math.hh
 -
 sdf/Console.hh
-/usr/include/sdformat-6.2/sdf/sdf/Console.hh
+/usr/include/sdformat-6.0/sdf/sdf/Console.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Root.hh
+/usr/include/sdformat-6.0/sdf/Root.hh
 string
 -
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/SDFImpl.hh
+/usr/include/sdformat-6.0/sdf/SDFImpl.hh
 functional
 -
 memory
@@ -11784,15 +11774,15 @@ memory
 string
 -
 sdf/Param.hh
-/usr/include/sdformat-6.2/sdf/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/sdf/Param.hh
 sdf/Element.hh
-/usr/include/sdformat-6.2/sdf/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/sdf/Element.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/Types.hh
 algorithm
 -
 cmath
@@ -11806,29 +11796,29 @@ string
 vector
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Error.hh
-/usr/include/sdformat-6.2/sdf/sdf/Error.hh
+/usr/include/sdformat-6.0/sdf/sdf/Error.hh
 
-/usr/include/sdformat-6.2/sdf/World.hh
+/usr/include/sdformat-6.0/sdf/World.hh
 string
 -
 sdf/Element.hh
-/usr/include/sdformat-6.2/sdf/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/parser.hh
+/usr/include/sdformat-6.0/sdf/parser.hh
 string
 -
 sdf/SDFImpl.hh
-/usr/include/sdformat-6.2/sdf/sdf/SDFImpl.hh
+/usr/include/sdformat-6.0/sdf/sdf/SDFImpl.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/sdf.hh
+/usr/include/sdformat-6.0/sdf/sdf.hh
 sdf/Assert.hh
 -
 sdf/Console.hh
@@ -11858,9 +11848,9 @@ sdf/World.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-6.2/sdf/sdf_config.h
+/usr/include/sdformat-6.0/sdf/sdf_config.h
 
-/usr/include/sdformat-6.2/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/system_util.hh
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
 bits/wordsize.h

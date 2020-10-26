@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nptttn/senior_project/ros/quadrotor/src
+CMAKE_SOURCE_DIR = /home/pat/drone/senior_project/ros/quadrotor/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nptttn/senior_project/ros/quadrotor/build
+CMAKE_BINARY_DIR = /home/pat/drone/senior_project/ros/quadrotor/build
 
 # Utility rule file for rosgraph_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ quad_sim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build: rosgraph_msgs
 .PHONY : quad_sim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 
 quad_sim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	cd /home/nptttn/senior_project/ros/quadrotor/build/quad_sim && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/pat/drone/senior_project/ros/quadrotor/build/quad_sim && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : quad_sim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 quad_sim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend:
-	cd /home/nptttn/senior_project/ros/quadrotor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nptttn/senior_project/ros/quadrotor/src /home/nptttn/senior_project/ros/quadrotor/src/quad_sim /home/nptttn/senior_project/ros/quadrotor/build /home/nptttn/senior_project/ros/quadrotor/build/quad_sim /home/nptttn/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pat/drone/senior_project/ros/quadrotor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pat/drone/senior_project/ros/quadrotor/src /home/pat/drone/senior_project/ros/quadrotor/src/quad_sim /home/pat/drone/senior_project/ros/quadrotor/build /home/pat/drone/senior_project/ros/quadrotor/build/quad_sim /home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : quad_sim/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
 

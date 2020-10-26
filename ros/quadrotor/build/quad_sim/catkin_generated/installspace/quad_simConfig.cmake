@@ -67,14 +67,14 @@ set(quad_sim_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(quad_sim_SOURCE_PREFIX /home/nptttn/senior_project/ros/quadrotor/src/quad_sim)
-  set(quad_sim_DEVEL_PREFIX /home/nptttn/senior_project/ros/quadrotor/devel)
+  set(quad_sim_SOURCE_PREFIX /home/pat/drone/senior_project/ros/quadrotor/src/quad_sim)
+  set(quad_sim_DEVEL_PREFIX /home/pat/drone/senior_project/ros/quadrotor/devel)
   set(quad_sim_INSTALL_PREFIX "")
   set(quad_sim_PREFIX ${quad_sim_DEVEL_PREFIX})
 else()
   set(quad_sim_SOURCE_PREFIX "")
   set(quad_sim_DEVEL_PREFIX "")
-  set(quad_sim_INSTALL_PREFIX /home/nptttn/senior_project/ros/quadrotor/install)
+  set(quad_sim_INSTALL_PREFIX /home/pat/drone/senior_project/ros/quadrotor/install)
   set(quad_sim_PREFIX ${quad_sim_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nptttn/senior_project/ros/quadrotor/install/lib;/home/nptttn/Quadrotor_Simulator/devel/lib;/home/nptttn/bangpanroyyim/devel/lib;/home/nptttn/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/pat/drone/senior_project/ros/quadrotor/install/lib;/home/pat/drone/senior_project/ros/quadrotor/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
