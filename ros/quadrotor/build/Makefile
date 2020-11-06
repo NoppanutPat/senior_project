@@ -818,6 +818,19 @@ bond_generate_messages_lisp/fast:
 .PHONY : bond_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named success_quad_velocity_control_plugins
+
+# Build rule for target.
+success_quad_velocity_control_plugins: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 success_quad_velocity_control_plugins
+.PHONY : success_quad_velocity_control_plugins
+
+# fast build rule for target.
+success_quad_velocity_control_plugins/fast:
+	$(MAKE) -f quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/build.make quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/build
+.PHONY : success_quad_velocity_control_plugins/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -1660,6 +1673,7 @@ help:
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... gazebo_msgs_generate_messages_cpp"
 	@echo "... bond_generate_messages_lisp"
+	@echo "... success_quad_velocity_control_plugins"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... nodelet_generate_messages_cpp"

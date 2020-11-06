@@ -783,6 +783,21 @@ bond_generate_messages_lisp/fast:
 .PHONY : bond_generate_messages_lisp/fast
 
 # Convenience name for target.
+quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/rule:
+	cd /home/pat/drone/senior_project/ros/quadrotor/build && $(MAKE) -f CMakeFiles/Makefile2 quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/rule
+.PHONY : quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/rule
+
+# Convenience name for target.
+success_quad_velocity_control_plugins: quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/rule
+
+.PHONY : success_quad_velocity_control_plugins
+
+# fast build rule for target.
+success_quad_velocity_control_plugins/fast:
+	cd /home/pat/drone/senior_project/ros/quadrotor/build && $(MAKE) -f quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/build.make quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/build
+.PHONY : success_quad_velocity_control_plugins/fast
+
+# Convenience name for target.
 quad_sim/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
 	cd /home/pat/drone/senior_project/ros/quadrotor/build && $(MAKE) -f CMakeFiles/Makefile2 quad_sim/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : quad_sim/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
@@ -1736,6 +1751,33 @@ src/quad_velocity_control_plugins.cpp.s:
 	cd /home/pat/drone/senior_project/ros/quadrotor/build && $(MAKE) -f quad_sim/CMakeFiles/quad_velocity_control_plugins.dir/build.make quad_sim/CMakeFiles/quad_velocity_control_plugins.dir/src/quad_velocity_control_plugins.cpp.s
 .PHONY : src/quad_velocity_control_plugins.cpp.s
 
+src/succecss_quad_liftforce_plugins.o: src/succecss_quad_liftforce_plugins.cpp.o
+
+.PHONY : src/succecss_quad_liftforce_plugins.o
+
+# target to build an object file
+src/succecss_quad_liftforce_plugins.cpp.o:
+	cd /home/pat/drone/senior_project/ros/quadrotor/build && $(MAKE) -f quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/build.make quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/src/succecss_quad_liftforce_plugins.cpp.o
+.PHONY : src/succecss_quad_liftforce_plugins.cpp.o
+
+src/succecss_quad_liftforce_plugins.i: src/succecss_quad_liftforce_plugins.cpp.i
+
+.PHONY : src/succecss_quad_liftforce_plugins.i
+
+# target to preprocess a source file
+src/succecss_quad_liftforce_plugins.cpp.i:
+	cd /home/pat/drone/senior_project/ros/quadrotor/build && $(MAKE) -f quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/build.make quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/src/succecss_quad_liftforce_plugins.cpp.i
+.PHONY : src/succecss_quad_liftforce_plugins.cpp.i
+
+src/succecss_quad_liftforce_plugins.s: src/succecss_quad_liftforce_plugins.cpp.s
+
+.PHONY : src/succecss_quad_liftforce_plugins.s
+
+# target to generate assembly for a file
+src/succecss_quad_liftforce_plugins.cpp.s:
+	cd /home/pat/drone/senior_project/ros/quadrotor/build && $(MAKE) -f quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/build.make quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/src/succecss_quad_liftforce_plugins.cpp.s
+.PHONY : src/succecss_quad_liftforce_plugins.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1789,6 +1831,7 @@ help:
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... gazebo_msgs_generate_messages_cpp"
 	@echo "... bond_generate_messages_lisp"
+	@echo "... success_quad_velocity_control_plugins"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... nodelet_generate_messages_cpp"
@@ -1856,6 +1899,9 @@ help:
 	@echo "... src/quad_velocity_control_plugins.o"
 	@echo "... src/quad_velocity_control_plugins.i"
 	@echo "... src/quad_velocity_control_plugins.s"
+	@echo "... src/succecss_quad_liftforce_plugins.o"
+	@echo "... src/succecss_quad_liftforce_plugins.i"
+	@echo "... src/succecss_quad_liftforce_plugins.s"
 .PHONY : help
 
 

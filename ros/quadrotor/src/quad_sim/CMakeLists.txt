@@ -157,6 +157,9 @@ target_link_libraries(quad_liftforce_plugins ${catkin_LIBRARIES} ${GAZEBO_LIBRAR
 add_library(quad_velocity_control_plugins src/quad_velocity_control_plugins.cpp)
 target_link_libraries(quad_velocity_control_plugins ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
 
+add_library(success_quad_velocity_control_plugins src/succecss_quad_liftforce_plugins.cpp)
+target_link_libraries(success_quad_velocity_control_plugins ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure

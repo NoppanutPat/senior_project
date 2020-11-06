@@ -82,6 +82,7 @@
 /home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir
 /home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir
 /home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/bond_generate_messages_lisp.dir
+/home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir
 /home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/std_msgs_generate_messages_cpp.dir
 /home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/std_srvs_generate_messages_nodejs.dir
 /home/pat/drone/senior_project/ros/quadrotor/build/quad_sim/CMakeFiles/nodelet_generate_messages_cpp.dir

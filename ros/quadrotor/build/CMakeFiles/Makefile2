@@ -410,6 +410,7 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 # Convenience name for "all" pass in the directory.
 quad_sim/all: quad_sim/CMakeFiles/quad_velocity_control_plugins.dir/all
 quad_sim/all: quad_sim/CMakeFiles/quad_liftforce_plugins.dir/all
+quad_sim/all: quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/all
 
 .PHONY : quad_sim/all
 
@@ -455,6 +456,7 @@ quad_sim/clean: quad_sim/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 quad_sim/clean: quad_sim/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
 quad_sim/clean: quad_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/clean
 quad_sim/clean: quad_sim/CMakeFiles/bond_generate_messages_lisp.dir/clean
+quad_sim/clean: quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/clean
 quad_sim/clean: quad_sim/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 quad_sim/clean: quad_sim/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
 quad_sim/clean: quad_sim/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
@@ -1842,6 +1844,43 @@ quad_sim/CMakeFiles/bond_generate_messages_lisp.dir/clean:
 
 # clean rule for target.
 clean: quad_sim/CMakeFiles/bond_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir
+
+# All Build rule for target.
+quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/all:
+	$(MAKE) -f quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/build.make quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/depend
+	$(MAKE) -f quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/build.make quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles --progress-num=16,17 "Built target success_quad_velocity_control_plugins"
+.PHONY : quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/all
+
+# Include target in all.
+all: quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles 0
+.PHONY : quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/rule
+
+# Convenience name for target.
+success_quad_velocity_control_plugins: quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/rule
+
+.PHONY : success_quad_velocity_control_plugins
+
+# clean rule for target.
+quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/clean:
+	$(MAKE) -f quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/build.make quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/clean
+.PHONY : quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/clean
+
+# clean rule for target.
+clean: quad_sim/CMakeFiles/success_quad_velocity_control_plugins.dir/clean
 
 .PHONY : clean
 
