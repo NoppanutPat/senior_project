@@ -7,7 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/pat/drone/senior_project/ros/quadrotor/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH='/opt/ros/noetic/lib'
+export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig'
 export PWD='/home/pat/drone/senior_project/ros/quadrotor/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/pat/drone/senior_project/ros/quadrotor/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/pat/drone/senior_project/ros/quadrotor/src:$ROS_PACKAGE_PATH"
