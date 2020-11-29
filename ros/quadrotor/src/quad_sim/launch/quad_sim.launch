@@ -14,9 +14,9 @@
     <arg name="headless" value="$(arg headless)"/>
   </include>
 
-  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" output="screen" ></node> 
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" ></node> 
 
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find quad_sim)/urdf/quad_sim.xacro'" /> 
+  <param name="robot_description" command="xacro '$(find quad_sim)/urdf/quad_sim.xacro'" /> 
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model quadrotor -param robot_description"/> 
 
 
