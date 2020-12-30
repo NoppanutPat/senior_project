@@ -1,0 +1,8 @@
+prefix=/home/pat/drone/senior_project/ros/quadrotor/install
+
+Name: tf_conversions
+Description: Description of tf_conversions
+Version: 1.13.2
+Cflags: -I${prefix}/include -I/usr/include/eigen3 -I/usr/share/orocos_kdl/cmake/../../../include
+Libs: -L${prefix}/lib -ltf_conversions -lorocos-kdl
+Requires: geometry_msgs kdl_conversions tf

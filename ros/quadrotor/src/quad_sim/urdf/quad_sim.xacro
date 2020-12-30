@@ -76,9 +76,11 @@
 
     <link name="frame">
         <inertial>
-            <mass value="0.061399" />
+            <!-- <mass value="0.061399" /> -->
+            <mass value="0.06" />
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <xacro:frame_inertia />
+            <!-- <xacro:frame_inertia /> -->
+            <xacro:box_inertia m="0.06" h="0.001" w="0.001" d="0.005" />
         </inertial>
         <visual>
             <origin xyz="-0.11 0.11 0" rpy="${PI/2} 0 0" />
@@ -190,7 +192,7 @@
 
     <gazebo>
         <plugin name="success_quad_velocity_control_plugins" filename="libsuccess_quad_velocity_control_plugins.so">
-            <robotNamespace>quad_sim</robotNamespace>
+            <robotNamespace>quadrotor</robotNamespace>
             <propeller1_link>propeller1</propeller1_link>
             <propeller2_link>propeller2</propeller2_link>
             <propeller3_link>propeller3</propeller3_link>
@@ -204,9 +206,9 @@
     <link name='camera1_link'>
         
         <inertial name="camera1_inertia">
-            <mass value="0.01" />
+            <mass value="0.00000001" />
             <origin rpy="0 0 0" xyz="0 0 0"/>
-            <xacro:box_inertia m="0.01" h="0.01" w="0.01" d="0.01" />
+            <xacro:box_inertia m="0.00000001" h="0.01" w="0.01" d="0.01" />
         </inertial>
 
         <collision name='collision'>
@@ -252,7 +254,7 @@
 
         <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
             <alwaysOn>true</alwaysOn>
-            <updateRate>10.0</updateRate>
+            <updateRate>30.0</updateRate>
             <cameraName>camera1</cameraName>
             <imageTopicName>image_raw</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
@@ -295,7 +297,7 @@
             <visualize>true</visualize>
             <topic>__default_topic__</topic>
             <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
-                <topicName>imu_data</topicName>
+                <topicName>quadrotor/imu_data</topicName>
                 <bodyName>imu_link</bodyName>
                 <updateRateHZ>0.0</updateRateHZ>
                 <gaussianNoise>0.0</gaussianNoise>

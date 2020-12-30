@@ -118,7 +118,7 @@ quad_velocity_control_plugins_EXTERNAL_OBJECTS =
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /opt/ros/noetic/lib/libcamera_calibration_parsers.so
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /opt/ros/noetic/lib/libgazebo_ros_api_plugin.so
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /opt/ros/noetic/lib/libgazebo_ros_paths_plugin.so
-/home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /opt/ros/noetic/lib/libtf.so
+/home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libtf.so
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /opt/ros/noetic/lib/libtf2_ros.so
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /opt/ros/noetic/lib/libactionlib.so
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /opt/ros/noetic/lib/libmessage_filters.so
@@ -195,6 +195,9 @@ quad_velocity_control_plugins_EXTERNAL_OBJECTS =
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /usr/lib/x86_64-linux-gnu/libignition-common3-graphics.so.3.6.0
+/home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
+/home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so.3.6
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so.3.6
 /home/pat/drone/senior_project/ros/quadrotor/devel/lib/libquad_velocity_control_plugins.so: /usr/lib/x86_64-linux-gnu/libblas.so

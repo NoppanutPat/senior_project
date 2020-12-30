@@ -1,3 +1,9 @@
 [submodule "example/ardupilot_gazebo"]
 	path = example/ardupilot_gazebo
 	url = https://github.com/khancyr/ardupilot_gazebo.git
+[submodule "ros/quadrotor/src/geometry"]
+	path = ros/quadrotor/src/geometry
+	url = https://github.com/ros/geometry.git
+[submodule "ros/quadrotor/src/vision_opencv"]
+	path = ros/quadrotor/src/vision_opencv
+	url = https://github.com/ros-perception/vision_opencv.git

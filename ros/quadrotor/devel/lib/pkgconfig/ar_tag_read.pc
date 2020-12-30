@@ -1,0 +1,8 @@
+prefix=/home/pat/drone/senior_project/ros/quadrotor/devel
+
+Name: ar_tag_read
+Description: Description of ar_tag_read
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

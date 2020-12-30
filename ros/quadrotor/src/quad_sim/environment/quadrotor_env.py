@@ -158,7 +158,7 @@ class QuadEnv(gym.Env):
 
         # print(normal_curve(delta_h))
 
-        if self.pose.z > self.goal_h*3 or abs(self.pose.x) >= 0.5 or abs(self.pose.y) >= 0.5 or abs(self.orientation.x) >= 0.5 or abs(self.orientation.y) >= 0.5:
+        if self.pose.z > self.goal_h*2 or abs(self.pose.x) >= 0.5 or abs(self.pose.y) >= 0.5 or abs(self.orientation.x) >= 0.4 or abs(self.orientation.y) >= 0.4:
 
             done=True
             reward = -100

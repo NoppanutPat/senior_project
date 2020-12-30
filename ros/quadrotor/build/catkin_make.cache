@@ -1,2 +1,2 @@
-quad_sim
+ar_tag_read:geometry/eigen_conversions:geometry/geometry:geometry/kdl_conversions:geometry/tf:geometry/tf_conversions:quad_sim:vision_opencv/cv_bridge:vision_opencv/image_geometry:vision_opencv/opencv_tests:vision_opencv/vision_opencv
 -DCATKIN_DEVEL_PREFIX=/home/pat/drone/senior_project/ros/quadrotor/devel -DCMAKE_INSTALL_PREFIX=/home/pat/drone/senior_project/ros/quadrotor/install -G Unix Makefiles
