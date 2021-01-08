@@ -20,9 +20,9 @@ env = QuadEnv_point()
 n_actions = env.action_space.shape[-1]
 action_noise = NormalActionNoise(mean=np.zeros(n_actions), sigma=0.1 * np.ones(n_actions))
 
-model = TD3(MlpPolicy, env, action_noise=action_noise, verbose=1,learning_rate=0.01)
+model = TD3(MlpPolicy, env, action_noise=action_noise, verbose=1)
 
-model = model.load("/home/pat/drone/senior_project/ros/quadrotor/src/quad_sim/weight/QuadEnv-V0-episode374.zip")
+model = model.load("/home/pat/drone/senior_project/ros/quadrotor/src/quad_sim/weight/takeoff_weight/success2/QuadEnv-V0-episode1.zip")
 # mean_reward, std_reward = evaluate_policy(model, model.get_env(), n_eval_episodes=10)
 
 # print("mean reward : ",mean_reward)
@@ -32,7 +32,7 @@ obs = env.reset()
 
 while True:        
 
-    action, _states = model.predict(obs, deterministic=True)
+    action, _states = model.predict(obs, deterministic=False)
     obs, reward, done, info = env.step(action)
 
     if done:

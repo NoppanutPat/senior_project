@@ -25,6 +25,7 @@ from cv_bridge import CvBridge
 def reward_function(x,y):
 
     sum = 0
+    dist = ((abs(x-960)**2) + (abs(y-540)**2))**0.5
 
     if x > 950 and x < 970:
 
@@ -41,6 +42,8 @@ def reward_function(x,y):
     else:
 
         sum += abs(100/(abs(540-y)**0.5))
+
+    # sum = 
 
     # print("reward : ",sum)
 
@@ -143,7 +146,7 @@ class QuadEnv_point(gym.Env):
         if x == -1000 and y == -1000:
 
             done=True
-            reward = -1000
+            reward = 0
 
         elif duration > 120:
 
