@@ -22,30 +22,56 @@ import cv2
 from tf.transformations import euler_from_quaternion
 from cv_bridge import CvBridge
 
+# def reward_function(x,y):
+
+#     sum = 0
+#     # dist = ((abs(x-960)**2) + (abs(y-540)**2))**0.5
+
+#     if x > 950 and x < 970:
+
+#         sum += 1000
+
+#     else:
+
+#         # sum += abs(100/(abs(960-x)**0.5))
+#         sum += 1000*math.sin(x/611)
+
+#     if y > 530 and y < 550:
+
+#         sum += 1000
+
+#     else:
+
+#         # sum += 20*abs(100/(abs(540-y)**0.5))
+#         sum += 1000*math.sin(x/344)
+
+#     # sum = 
+
+#     # print("reward : ",sum)
+
+#     return  sum
+
 def reward_function(x,y):
 
     sum = 0
-    dist = ((abs(x-960)**2) + (abs(y-540)**2))**0.5
 
     if x > 950 and x < 970:
-
         sum += 200
 
-    else:
+    elif x <= 950:
+        sum += 1000*math.tanh(x/400.0)
 
-        sum += abs(100/(abs(960-x)**0.5))
+    else:
+        sum += 1000*math.tanh(1920-x/400.0)
 
     if y > 530 and y < 550:
-
         sum += 200
 
+    elif y <= 530:
+        sum += 1000*math.tanh(y/200.0)
+
     else:
-
-        sum += abs(100/(abs(540-y)**0.5))
-
-    # sum = 
-
-    # print("reward : ",sum)
+        sum += 1000*math.tanh(1080-y/200.0)
 
     return  sum
 
@@ -56,7 +82,7 @@ class QuadEnv_point(gym.Env):
 
         super(QuadEnv_point, self).__init__()
 
-        self.high_action = np.array([10,10,10,10],dtype=np.float32)
+        self.high_action = np.array([35,35,35,35],dtype=np.float32)
         self.low_action = -self.high_action
 
         inf = np.finfo(np.float32).max
@@ -86,6 +112,7 @@ class QuadEnv_point(gym.Env):
 
         self.throttle_pub = rospy.Publisher("/quadrotor/throttle",Float64MultiArray,queue_size=10)
         self.reward_pub = rospy.Publisher("/quadrotor/reward",Float64,queue_size=10)
+        self.state_pub = rospy.Publisher("/quadrotor/state",Float64MultiArray,queue_size=10)
 
         self.im_pos = rospy.Subscriber("/quadrotor/point_pos",Float64MultiArray,self.update_pos)
         self.imu = rospy.Subscriber("/quadrotor/imu_data",Imu,self.update_imu)
@@ -108,11 +135,21 @@ class QuadEnv_point(gym.Env):
 
     def update_imu(self,data):
         # print(data.linear_acceleration)
-        self.imu_data = [data.linear_acceleration.x,data.linear_acceleration.y,data.linear_acceleration.z]
+        temp_data = [round(data.linear_acceleration.x,3),round(data.linear_acceleration.y,3),round(data.linear_acceleration.z,3)]
+        # self.imu_data = []
+        # for i in temp_data:
+        #     if i > 0:
+        #         self.imu_data.append(1)
+        #     elif i < 0:
+        #         self.imu_data.append(-1)
+        #     elif i == 0:
+        #         self.imu_data.append(0)
+        self.imu_data = temp_data
         self.update_state()
 
     def update_state(self):
         self.state = np.array(self.im_data+self.imu_data)
+        self.state_pub.publish(Float64MultiArray(data=self.state))
 
     def seed(self , seed=None):
         self.np_random , seed = seeding.np_random(seed)
@@ -141,18 +178,18 @@ class QuadEnv_point(gym.Env):
         throttle = Float64MultiArray(data=throttle)
         self.throttle_pub.publish(throttle)
 
-        reward = reward_function(x,y) + 20*(max(0,duration))
+        reward = reward_function(x,y) + 80*(max(0,duration))
 
         if x == -1000 and y == -1000:
 
             done=True
-            reward = 0
+            reward = -1000
 
-        elif duration > 120:
+        elif duration > 150:
 
             done = True
-            reward = 1000
-            print("Red dot in frame more than 2 minute.")
+            reward += 1000
+            print("Red dot in frame more than 2.5 minute.")
 
         observation = np.array(self.state)
 

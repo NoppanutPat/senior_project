@@ -19,6 +19,6 @@
   <param name="robot_description" command="xacro '$(find quad_sim)/urdf/quad_sim.xacro'" /> 
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model quadrotor -param robot_description"/> 
 
-
+  <node name="target_detector" pkg="quad_sim" type="target_detect.py" respawn="true" />
 
 </launch>

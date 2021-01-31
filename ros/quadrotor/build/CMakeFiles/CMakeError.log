@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_37960/fast && /usr/bin/make -f CMakeFiles/cmTC_37960.dir/build.make CMakeFiles/cmTC_37960.dir/build
+Run Build Command(s):/usr/bin/make cmTC_21acb/fast && /usr/bin/make -f CMakeFiles/cmTC_21acb.dir/build.make CMakeFiles/cmTC_21acb.dir/build
 make[1]: Entering directory '/home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_37960.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_37960.dir/src.c.o   -c /home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_37960
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37960.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_37960.dir/src.c.o  -o cmTC_37960 
-/usr/bin/ld: CMakeFiles/cmTC_37960.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_21acb.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_21acb.dir/src.c.o   -c /home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_21acb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21acb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_21acb.dir/src.c.o  -o cmTC_21acb 
+/usr/bin/ld: CMakeFiles/cmTC_21acb.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_37960.dir/build.make:87: cmTC_37960] Error 1
+make[1]: *** [CMakeFiles/cmTC_21acb.dir/build.make:87: cmTC_21acb] Error 1
 make[1]: Leaving directory '/home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_37960/fast] Error 2
+make: *** [Makefile:121: cmTC_21acb/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_47f73/fast && /usr/bin/make -f CMakeFiles/cmTC_47f73.dir/build.make CMakeFiles/cmTC_47f73.dir/build
+Run Build Command(s):/usr/bin/make cmTC_30995/fast && /usr/bin/make -f CMakeFiles/cmTC_30995.dir/build.make CMakeFiles/cmTC_30995.dir/build
 make[1]: Entering directory '/home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_47f73.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_47f73.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_47f73
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47f73.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_47f73.dir/CheckFunctionExists.c.o  -o cmTC_47f73  -lpthreads 
+Building C object CMakeFiles/cmTC_30995.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_30995.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_30995
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30995.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_30995.dir/CheckFunctionExists.c.o  -o cmTC_30995  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_47f73.dir/build.make:87: cmTC_47f73] Error 1
+make[1]: *** [CMakeFiles/cmTC_30995.dir/build.make:87: cmTC_30995] Error 1
 make[1]: Leaving directory '/home/pat/drone/senior_project/ros/quadrotor/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_47f73/fast] Error 2
+make: *** [Makefile:121: cmTC_30995/fast] Error 2
 
 
 

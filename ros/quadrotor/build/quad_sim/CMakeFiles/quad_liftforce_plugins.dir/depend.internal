@@ -159,6 +159,7 @@ quad_sim/CMakeFiles/quad_liftforce_plugins.dir/src/quad_liftforce_plugins.cpp.o
  /usr/include/gazebo-11/gazebo/msgs/packet.pb.h
  /usr/include/gazebo-11/gazebo/msgs/param.pb.h
  /usr/include/gazebo-11/gazebo/msgs/param_v.pb.h
+ /usr/include/gazebo-11/gazebo/msgs/performance_metrics.pb.h
  /usr/include/gazebo-11/gazebo/msgs/physics.pb.h
  /usr/include/gazebo-11/gazebo/msgs/pid.pb.h
  /usr/include/gazebo-11/gazebo/msgs/planegeom.pb.h
@@ -288,12 +289,14 @@ quad_sim/CMakeFiles/quad_liftforce_plugins.dir/src/quad_liftforce_plugins.cpp.o
  /usr/include/ignition/math6/ignition/math/Angle.hh
  /usr/include/ignition/math6/ignition/math/AxisAlignedBox.hh
  /usr/include/ignition/math6/ignition/math/Box.hh
+ /usr/include/ignition/math6/ignition/math/Capsule.hh
  /usr/include/ignition/math6/ignition/math/Color.hh
  /usr/include/ignition/math6/ignition/math/Cylinder.hh
  /usr/include/ignition/math6/ignition/math/DiffDriveOdometry.hh
  /usr/include/ignition/math6/ignition/math/Export.hh
  /usr/include/ignition/math6/ignition/math/Filter.hh
  /usr/include/ignition/math6/ignition/math/Frustum.hh
+ /usr/include/ignition/math6/ignition/math/GaussMarkovProcess.hh
  /usr/include/ignition/math6/ignition/math/Helpers.hh
  /usr/include/ignition/math6/ignition/math/Inertial.hh
  /usr/include/ignition/math6/ignition/math/Kmeans.hh
@@ -328,6 +331,7 @@ quad_sim/CMakeFiles/quad_liftforce_plugins.dir/src/quad_liftforce_plugins.cpp.o
  /usr/include/ignition/math6/ignition/math/Vector4.hh
  /usr/include/ignition/math6/ignition/math/config.hh
  /usr/include/ignition/math6/ignition/math/detail/Box.hh
+ /usr/include/ignition/math6/ignition/math/detail/Capsule.hh
  /usr/include/ignition/math6/ignition/math/detail/Cylinder.hh
  /usr/include/ignition/math6/ignition/math/detail/Export.hh
  /usr/include/ignition/math6/ignition/math/detail/Sphere.hh
@@ -410,6 +414,8 @@ quad_sim/CMakeFiles/quad_liftforce_plugins.dir/src/quad_liftforce_plugins.cpp.o
  /usr/include/ignition/msgs5/ignition/msgs/joint.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/joint_animation.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/joint_cmd.pb.h
+ /usr/include/ignition/msgs5/ignition/msgs/joint_trajectory.pb.h
+ /usr/include/ignition/msgs5/ignition/msgs/joint_trajectory_point.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/joint_wrench.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/joy.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/joystick.pb.h
@@ -478,6 +484,7 @@ quad_sim/CMakeFiles/quad_liftforce_plugins.dir/src/quad_liftforce_plugins.cpp.o
  /usr/include/ignition/msgs5/ignition/msgs/sonar.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/spheregeom.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/spherical_coordinates.pb.h
+ /usr/include/ignition/msgs5/ignition/msgs/statistic.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/stringmsg.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/stringmsg_v.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/subscribe.pb.h
@@ -524,6 +531,7 @@ quad_sim/CMakeFiles/quad_liftforce_plugins.dir/src/quad_liftforce_plugins.cpp.o
  /usr/include/ignition/transport8/ignition/transport/ReqHandler.hh
  /usr/include/ignition/transport8/ignition/transport/SubscribeOptions.hh
  /usr/include/ignition/transport8/ignition/transport/SubscriptionHandler.hh
+ /usr/include/ignition/transport8/ignition/transport/TopicStatistics.hh
  /usr/include/ignition/transport8/ignition/transport/TopicStorage.hh
  /usr/include/ignition/transport8/ignition/transport/TopicUtils.hh
  /usr/include/ignition/transport8/ignition/transport/TransportTypes.hh
@@ -531,49 +539,51 @@ quad_sim/CMakeFiles/quad_liftforce_plugins.dir/src/quad_liftforce_plugins.cpp.o
  /usr/include/ignition/transport8/ignition/transport/config.hh
  /usr/include/ignition/transport8/ignition/transport/detail/Export.hh
  /usr/include/ignition/transport8/ignition/transport/detail/Node.hh
- /usr/include/sdformat-9.2/sdf/Actor.hh
- /usr/include/sdformat-9.2/sdf/AirPressure.hh
- /usr/include/sdformat-9.2/sdf/Altimeter.hh
- /usr/include/sdformat-9.2/sdf/Assert.hh
- /usr/include/sdformat-9.2/sdf/Atmosphere.hh
- /usr/include/sdformat-9.2/sdf/Box.hh
- /usr/include/sdformat-9.2/sdf/Camera.hh
- /usr/include/sdformat-9.2/sdf/Collision.hh
- /usr/include/sdformat-9.2/sdf/Console.hh
- /usr/include/sdformat-9.2/sdf/Cylinder.hh
- /usr/include/sdformat-9.2/sdf/Element.hh
- /usr/include/sdformat-9.2/sdf/Error.hh
- /usr/include/sdformat-9.2/sdf/Exception.hh
- /usr/include/sdformat-9.2/sdf/Filesystem.hh
- /usr/include/sdformat-9.2/sdf/Frame.hh
- /usr/include/sdformat-9.2/sdf/Geometry.hh
- /usr/include/sdformat-9.2/sdf/Gui.hh
- /usr/include/sdformat-9.2/sdf/Imu.hh
- /usr/include/sdformat-9.2/sdf/Joint.hh
- /usr/include/sdformat-9.2/sdf/JointAxis.hh
- /usr/include/sdformat-9.2/sdf/Lidar.hh
- /usr/include/sdformat-9.2/sdf/Light.hh
- /usr/include/sdformat-9.2/sdf/Link.hh
- /usr/include/sdformat-9.2/sdf/Magnetometer.hh
- /usr/include/sdformat-9.2/sdf/Material.hh
- /usr/include/sdformat-9.2/sdf/Mesh.hh
- /usr/include/sdformat-9.2/sdf/Model.hh
- /usr/include/sdformat-9.2/sdf/Noise.hh
- /usr/include/sdformat-9.2/sdf/Param.hh
- /usr/include/sdformat-9.2/sdf/Pbr.hh
- /usr/include/sdformat-9.2/sdf/Physics.hh
- /usr/include/sdformat-9.2/sdf/Plane.hh
- /usr/include/sdformat-9.2/sdf/Root.hh
- /usr/include/sdformat-9.2/sdf/SDFImpl.hh
- /usr/include/sdformat-9.2/sdf/Scene.hh
- /usr/include/sdformat-9.2/sdf/SemanticPose.hh
- /usr/include/sdformat-9.2/sdf/Sensor.hh
- /usr/include/sdformat-9.2/sdf/Sphere.hh
- /usr/include/sdformat-9.2/sdf/Surface.hh
- /usr/include/sdformat-9.2/sdf/Types.hh
- /usr/include/sdformat-9.2/sdf/Visual.hh
- /usr/include/sdformat-9.2/sdf/World.hh
- /usr/include/sdformat-9.2/sdf/parser.hh
- /usr/include/sdformat-9.2/sdf/sdf.hh
- /usr/include/sdformat-9.2/sdf/sdf_config.h
- /usr/include/sdformat-9.2/sdf/system_util.hh
+ /usr/include/sdformat-9.4/sdf/Actor.hh
+ /usr/include/sdformat-9.4/sdf/AirPressure.hh
+ /usr/include/sdformat-9.4/sdf/Altimeter.hh
+ /usr/include/sdformat-9.4/sdf/Assert.hh
+ /usr/include/sdformat-9.4/sdf/Atmosphere.hh
+ /usr/include/sdformat-9.4/sdf/Box.hh
+ /usr/include/sdformat-9.4/sdf/Camera.hh
+ /usr/include/sdformat-9.4/sdf/Collision.hh
+ /usr/include/sdformat-9.4/sdf/Console.hh
+ /usr/include/sdformat-9.4/sdf/Cylinder.hh
+ /usr/include/sdformat-9.4/sdf/Element.hh
+ /usr/include/sdformat-9.4/sdf/Error.hh
+ /usr/include/sdformat-9.4/sdf/Exception.hh
+ /usr/include/sdformat-9.4/sdf/Filesystem.hh
+ /usr/include/sdformat-9.4/sdf/Frame.hh
+ /usr/include/sdformat-9.4/sdf/Geometry.hh
+ /usr/include/sdformat-9.4/sdf/Gui.hh
+ /usr/include/sdformat-9.4/sdf/Heightmap.hh
+ /usr/include/sdformat-9.4/sdf/Imu.hh
+ /usr/include/sdformat-9.4/sdf/Joint.hh
+ /usr/include/sdformat-9.4/sdf/JointAxis.hh
+ /usr/include/sdformat-9.4/sdf/Lidar.hh
+ /usr/include/sdformat-9.4/sdf/Light.hh
+ /usr/include/sdformat-9.4/sdf/Link.hh
+ /usr/include/sdformat-9.4/sdf/Magnetometer.hh
+ /usr/include/sdformat-9.4/sdf/Material.hh
+ /usr/include/sdformat-9.4/sdf/Mesh.hh
+ /usr/include/sdformat-9.4/sdf/Model.hh
+ /usr/include/sdformat-9.4/sdf/Noise.hh
+ /usr/include/sdformat-9.4/sdf/Param.hh
+ /usr/include/sdformat-9.4/sdf/Pbr.hh
+ /usr/include/sdformat-9.4/sdf/Physics.hh
+ /usr/include/sdformat-9.4/sdf/Plane.hh
+ /usr/include/sdformat-9.4/sdf/Root.hh
+ /usr/include/sdformat-9.4/sdf/SDFImpl.hh
+ /usr/include/sdformat-9.4/sdf/Scene.hh
+ /usr/include/sdformat-9.4/sdf/SemanticPose.hh
+ /usr/include/sdformat-9.4/sdf/Sensor.hh
+ /usr/include/sdformat-9.4/sdf/Sky.hh
+ /usr/include/sdformat-9.4/sdf/Sphere.hh
+ /usr/include/sdformat-9.4/sdf/Surface.hh
+ /usr/include/sdformat-9.4/sdf/Types.hh
+ /usr/include/sdformat-9.4/sdf/Visual.hh
+ /usr/include/sdformat-9.4/sdf/World.hh
+ /usr/include/sdformat-9.4/sdf/parser.hh
+ /usr/include/sdformat-9.4/sdf/sdf.hh
+ /usr/include/sdformat-9.4/sdf/sdf_config.h
+ /usr/include/sdformat-9.4/sdf/system_util.hh

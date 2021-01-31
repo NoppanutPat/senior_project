@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro = "http://www.ros.org/wiki/xacro" name="quadrotor/quadrotor">
+
+    <xacro:macro name="frame_inertia">
+        <inertia ixx="1.231E-04" ixy="-3.560E-08" ixz="4.131E-07"
+                 iyy="1.218E-04" iyz="4.210E-07"
+                 izz="1.942E-04" />
+    </xacro:macro>
+
+    <xacro:macro name="propellers_holder_inertia">
+        <inertia ixx="0.00" ixy="0.00" ixz="0.00"
+                 iyy="0.00" iyz="0.00"
+                 izz="0.00" />
+    </xacro:macro>
+
+    <xacro:macro name="propellers_inertia">
+        <inertia ixx="3.962E-06" ixy="0.00" ixz="-8.233E-10"
+                 iyy="6.100E-06" iyz="0.00"
+                 izz="6.716E-06" />
+    </xacro:macro>
+
+    <xacro:macro name="box_inertia" params="m h w d">
+        <inertia  ixx="${m*((h*h)+(d*d))/12}" ixy = "0" ixz = "0"
+                iyy="${m*((w*w)+(d*d))/12}" iyz = "0"
+                izz="${m*((h*h)+(w*w))/12}" /> 
+    </xacro:macro>
+
+    <xacro:property name="PI" value="3.1415926535897931" />
+    <xacro:property name="frame_file_path" value="$(find quad_sim)/urdf/meshes/final_frame.stl" />
+    <xacro:property name="propeller_base_file_path" value="$(find quad_sim)/urdf/meshes/KV2540_Motor_Base.stl" />
+    <xacro:property name="propeller_file_path" value="$(find quad_sim)/urdf/meshes/KV2540_Motor_Propeller_holder.stl" />
+    
+    <xacro:macro name="propeller_holder_link" params="name">
+        <link name="${name}">
+            <inertial>
+                <mass value="0.01696" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <xacro:propellers_holder_inertia />
+            </inertial>
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <mesh filename="${propeller_base_file_path}" scale="0.001 0.001 0.001" />
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <mesh filename="${propeller_base_file_path}" scale="0.001 0.001 0.001" />
+                </geometry>
+            </collision>
+        </link>
+    </xacro:macro>
+
+    <xacro:macro name="propeller_link" params="name">
+        <link name="${name}">
+            <inertial>
+                <mass value="0.01696" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <xacro:propellers_inertia />
+            </inertial>
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <mesh filename="${propeller_file_path}" scale="0.001 0.001 0.001" />
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <mesh filename="${propeller_file_path}" scale="0.001 0.001 0.001" />
+                </geometry>
+            </collision>
+        </link>
+    </xacro:macro>
+
+    <link name="frame">
+        <inertial>
+            <!-- <mass value="0.061399" /> -->
+            <mass value="0.06" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <!-- <xacro:frame_inertia /> -->
+            <xacro:box_inertia m="0.06" h="0.001" w="0.001" d="0.005" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.11 0.11 0" rpy="${PI/2} 0 0" />
+            <geometry>
+                <mesh filename="${frame_file_path}" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.11 0.11 0" rpy="${PI/2} 0 0" />
+            <geometry>
+                <mesh filename="${frame_file_path}" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="obj_load">
+        <inertial>
+            <mass value="0.6" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <xacro:box_inertia m="0.6" h="0.05" w="0.025" d="0.05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.05 0.05 0.025" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.05 0.05 0.025" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="body_load" type="fixed">
+        <origin xyz="0 0 0.05" rpy="0 0 0" />
+        <parent link="frame" />
+        <child link="obj_load" />
+    </joint>
+
+    <xacro:propeller_holder_link name="propeller_holder1"/>
+
+    <joint name="body_propeller1" type="fixed">
+        <origin xyz="0.095 -0.095 0.08" rpy="${PI/2} 0 0" />
+        <parent link="frame" />
+        <child link="propeller_holder1" />
+    </joint>
+
+    <xacro:propeller_holder_link name="propeller_holder2" />
+
+    <joint name="body_propeller2" type="fixed">
+        <origin xyz="-0.095 0.095 0.08" rpy="${PI/2} 0 0" />
+        <parent link="frame" />
+        <child link="propeller_holder2" />
+    </joint>
+
+    <xacro:propeller_holder_link name="propeller_holder3" />
+
+    <joint name="body_propeller3" type="fixed">
+        <origin xyz="0.095 0.095 0.08" rpy="${PI/2} 0 0" />
+        <parent link="frame" />
+        <child link="propeller_holder3" />
+    </joint>
+
+    <xacro:propeller_holder_link name="propeller_holder4" />
+
+    <joint name="body_propeller4" type="fixed">
+        <origin xyz="-0.095 -0.095 0.08" rpy="${PI/2} 0 0" />
+        <parent link="frame" />
+        <child link="propeller_holder4" />
+    </joint>
+
+
+
+    <xacro:propeller_link name="propeller1"/>
+
+    <joint name="propeller_base_propeller1" type="continuous">
+        <origin xyz="0.095 -0.095 0.081" rpy="${PI/2} 0 0" />
+        <parent link="frame" />
+        <child link="propeller1" />
+        <axis xyz="0 1 0" />
+        <dynamics damping="0.0004" friction="0.00"/>
+    </joint>
+
+    <xacro:propeller_link name="propeller2" />
+
+    <joint name="propeller_base_propeller2" type="continuous">
+        <origin xyz="-0.095 0.095 0.081" rpy="${PI/2} 0 0" />
+        <parent link="frame" />
+        <child link="propeller2" />
+        <axis xyz="0 1 0" />
+        <dynamics damping="0.0004" friction="0.00"/>
+    </joint>
+
+    <xacro:propeller_link name="propeller3" />
+1
+    <joint name="propeller_base_propeller3" type="continuous">
+        <origin xyz="0.095 0.095 0.081" rpy="${PI/2} 0 0" />
+        <parent link="frame" />
+        <child link="propeller3" />
+        <axis xyz="0 1 0" />
+        <dynamics damping="0.0004" friction="0.00"/>
+    </joint>
+
+    <xacro:propeller_link name="propeller4" />
+
+    <joint name="propeller_base_propeller4" type="continuous">
+        <origin xyz="-0.095 -0.095 0.081" rpy="${PI/2} 0 0" />
+        <parent link="frame" />
+        <child link="propeller4" />
+        <axis xyz="0 1 0" />
+        <dynamics damping="0.0004" friction="0.00"/>
+    </joint>
+
+    <!-- <gazebo>
+        <plugin name="quad_liftforce_plugins" filename="libquad_liftforce_plugins.so">
+            <propeller1_link>propeller1</propeller1_link>
+            <propeller2_link>propeller2</propeller2_link>
+            <propeller3_link>propeller3</propeller3_link>
+            <propeller4_link>propeller4</propeller4_link>
+        </plugin>
+    </gazebo>
+
+     <gazebo>
+        <plugin name="quad_velocity_control_plugins" filename="libquad_velocity_control_plugins.so">
+            <robotNamespace>quad_sim</robotNamespace>
+            <propeller1_link>propeller1</propeller1_link>
+            <propeller2_link>propeller2</propeller2_link>
+            <propeller3_link>propeller3</propeller3_link>
+            <propeller4_link>propeller4</propeller4_link>
+            <topicName>throttle</topicName>
+        </plugin>
+    </gazebo> -->
+
+    <gazebo>
+        <plugin name="success_quad_velocity_control_plugins" filename="libsuccess_quad_velocity_control_plugins.so">
+            <robotNamespace>quadrotor</robotNamespace>
+            <propeller1_link>propeller1</propeller1_link>
+            <propeller2_link>propeller2</propeller2_link>
+            <propeller3_link>propeller3</propeller3_link>
+            <propeller4_link>propeller4</propeller4_link>
+            <topicName>throttle</topicName>
+        </plugin>
+    </gazebo>
+
+    <link name="camera1_adj"></link>
+
+    <link name='camera1_link'>
+        
+        <inertial name="camera1_inertia">
+            <mass value="0.00000001" />
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <xacro:box_inertia m="0.00000001" h="0.01" w="0.01" d="0.01" />
+        </inertial>
+
+        <collision name='collision'>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <box size="0.01 0.01 0.01" />
+            </geometry>
+        </collision>
+
+        <visual name='visual'>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <box size="0.01 0.01 0.01" />
+            </geometry>
+        </visual>
+
+    </link>
+
+    <gazebo reference="camera1_link">
+        <sensor type="camera" name="camera1">
+        <update_rate>30.0</update_rate>
+        <camera name="camera1">
+            <horizontal_fov>1.0</horizontal_fov>
+            <!-- <horizontal_fov>1.0</horizontal_fov> -->
+            <image>
+            <width>1920</width>
+            <height>1080</height>
+            <format>R8G8B8</format>
+            </image>
+            <clip>
+            <near>0.02</near>
+            <far>300</far>
+            </clip>
+            <noise>
+            <type>gaussian</type>
+            <!-- Noise is sampled independently per pixel on each frame.
+                That pixel's noise value is added to each of its color
+                channels, which at that point lie in the range [0,1]. -->
+            <mean>0.01</mean>
+            <stddev>0.007</stddev>
+            </noise>
+        </camera>
+
+        <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+            <alwaysOn>true</alwaysOn>
+            <updateRate>30.0</updateRate>
+            <cameraName>camera1</cameraName>
+            <imageTopicName>image_raw</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <frameName>camera1_link</frameName>
+            <hackBaseline>1.57</hackBaseline>
+            <distortionK1>0.0</distortionK1>
+            <distortionK2>0.0</distortionK2>
+            <distortionK3>0.0</distortionK3>
+            <distortionT1>0.0</distortionT1>
+            <distortionT2>0.0</distortionT2>
+        </plugin>
+        </sensor>
+    </gazebo>
+
+    <joint name="camera1_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <parent link="camera1_adj" />
+        <child link="camera1_link"/>
+    </joint>
+
+    <joint name="camera1_joint" type="fixed">
+        <origin xyz="0.06 0 0.09" rpy="0 0 0"/>
+        <parent link="frame"/>
+        <child link="camera1_adj"/>
+    </joint>
+
+    <link name="imu_link" />
+
+    <joint name="imu_joint" type="fixed">
+        <origin xyz="0 0 0.09" rpy="0 0 0"/>
+        <parent link="frame"/>
+        <child link="imu_link"/>
+    </joint>
+
+    <gazebo reference="imu_link">
+        <gravity>true</gravity>
+        <sensor name="imu_sensor" type="imu">
+            <always_on>true</always_on>
+            <update_rate>100</update_rate>
+            <visualize>true</visualize>
+            <topic>__default_topic__</topic>
+            <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+                <topicName>quadrotor/imu_data</topicName>
+                <bodyName>imu_link</bodyName>
+                <updateRateHZ>0.0</updateRateHZ>
+                <gaussianNoise>0.0</gaussianNoise>
+                <xyzOffset>0 0 0</xyzOffset>
+                <rpyOffset>0 0 0</rpyOffset>
+                <frameName>imu_link</frameName>
+                <initialOrientationAsReference>true</initialOrientationAsReference>
+            </plugin>
+            <pose>0 0 0 0 0 0</pose>
+        </sensor>
+    </gazebo>
+
+</robot>

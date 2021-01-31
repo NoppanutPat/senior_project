@@ -7,3 +7,6 @@
 [submodule "ros/quadrotor/src/vision_opencv"]
 	path = ros/quadrotor/src/vision_opencv
 	url = https://github.com/ros-perception/vision_opencv.git
+[submodule "ros/quadrotor/src/ardupilot_gazebo"]
+	path = ros/quadrotor/src/ardupilot_gazebo
+	url = https://github.com/khancyr/ardupilot_gazebo.git

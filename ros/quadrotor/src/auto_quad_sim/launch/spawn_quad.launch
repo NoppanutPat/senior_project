@@ -1,0 +1,6 @@
+<launch>
+
+  <param name="robot_description" command="xacro '$(find auto_quad_sim)/urdf/quad_sim.xacro'" /> 
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model quadrotor -param robot_description"/> 
+
+</launch>
