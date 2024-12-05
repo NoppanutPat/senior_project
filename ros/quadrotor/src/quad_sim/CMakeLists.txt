@@ -142,7 +142,7 @@ include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
   ${GAZEBO_INCLUDE_DIRS}
-  /home/pat/drone/senior_project/ros/quadrotor/src/quad_sim/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
   /usr/include
 )
 
